@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/primary_2"/>
+    </item>
+    <item
+        android:drawable="@android:drawable/ic_input_add"
+        android:tileMode="disabled"
+        android:gravity="center"/>
+</layer-list>
