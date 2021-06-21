@@ -21,11 +21,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainContentBinding: ContentMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // stops the ui thread from executing for a second so that
-        // the splash screen can show for some time, this piece of code
-        // should be removed from the final production code and is here
-        // only for testing purposes
-        Thread.sleep(1000)
         // loads back the main theme
         setTheme(R.style.Theme_ECare_NoActionBar)
         super.onCreate(savedInstanceState)
