@@ -1,0 +1,11 @@
+## Contribution Guide
+- Fork this repository
+- Clone and then open it up on Android Studio
+- Open terminal and set upstream branch i.e git remote add upstream https://github.com/zuri-training/Ecare-mobile-pjt14.git
+- Pull upstream e.g. git pull upstream develop
+- Create a new branch for the task you are doing e.g. git checkout -b login
+- After making changes, do git add .
+- Commit your changes with a descriptive commit message e.g. git commit -m "commit message"
+- To make sure there are no conflicts e.g. git pull upstream develop
+- Push changes to your new branch: git push origin your-current-branch-name
+- Create a pull request to the develop branch
