@@ -8,4 +8,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="title_home">Home</string>
+    <string name="get_started">Get Started</string>
+    <string name="onboarding_subtitle">change the way you control, edit and manage patients information</string>
+    <string name="onboarding_title">Easy Hospital and Patient Management System</string>
 </resources>

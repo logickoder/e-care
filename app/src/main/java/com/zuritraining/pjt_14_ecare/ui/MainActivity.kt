@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         // loads back the main theme
         setTheme(R.style.Theme_ECare_NoActionBar)
         super.onCreate(savedInstanceState)
+
         initializeDisplayContent()
     }
 
