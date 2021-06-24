@@ -3,14 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/nav_onboarding">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.zuritraining.pjt_14_ecare.ui.home.HomeFragment"
+        android:id="@+id/nav_onboarding"
+        android:name="com.zuritraining.pjt_14_ecare.ui.onboarding_page.OnboardingFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_home" />
-    <fragment
+        tools:layout="@layout/fragment_onboarding_page" >
+        <action
+            android:id="@+id/action_nav_onboarding_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+  
+  <fragment
         android:id="@+id/loginFragment"
         android:name="com.zuritraining.pjt_14_ecare.ui.login.LoginFragment"
         android:label="Login"
@@ -19,6 +24,12 @@
             android:id="@+id/action_loginFragment_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.zuritraining.pjt_14_ecare.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home" />
 
 
 </navigation>
