@@ -6,6 +6,8 @@
     <string name="nav_header_subtitle">hospital@hospital.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="title_home">Home</string>
+    <string name="Register"><a href="http://www.google.com">Register</a></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
