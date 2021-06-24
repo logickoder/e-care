@@ -2,16 +2,21 @@ package com.zuritraining.pjt_14_ecare.ui
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+
 import com.zuritraining.pjt_14_ecare.R
 import com.zuritraining.pjt_14_ecare.databinding.ActivityMainBinding
 import com.zuritraining.pjt_14_ecare.databinding.AppBarMainBinding
 import com.zuritraining.pjt_14_ecare.databinding.ContentMainBinding
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarBinding: AppBarMainBinding
     private lateinit var mainContentBinding: ContentMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // loads back the main theme
         setTheme(R.style.Theme_ECare_NoActionBar)
@@ -27,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         initializeDisplayContent()
     }
+
+
+
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -41,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializeDisplayContent(){
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         appBarBinding = binding.appBar
         mainContentBinding = appBarBinding.contentMain
 

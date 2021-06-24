@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "966574445053",
+    "project_id": "e-care-b7df2",
+    "storage_bucket": "e-care-b7df2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966574445053:android:82937b0c03344b179bc994",
+        "android_client_info": {
+          "package_name": "com.zuritraining.pjt_14_ecare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966574445053-2vh3crqaf9p2ftsu9m0i9pbeh8f72mkg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zuritraining.pjt_14_ecare",
+            "certificate_hash": "40fcd83baf93181d9006127af7d493808a1aa9dd"
+          }
+        },
+        {
+          "client_id": "966574445053-ht8i6h7ujsvte9ncr3gltg5ngfpjci7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAKvguXnNIZpVRCmSXsJzh7JooUheyNJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966574445053-ht8i6h7ujsvte9ncr3gltg5ngfpjci7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
