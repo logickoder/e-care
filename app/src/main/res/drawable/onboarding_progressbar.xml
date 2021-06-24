@@ -8,7 +8,7 @@
             <size android:height="6sp" />
             <solid android:color="@color/primary_3" />
             <stroke android:color="@color/primary_3" android:width="2sp"/>
-            <padding android:left="2sp" android:right="2sp" android:top="2sp" android:bottom="2sp"/>
+            <padding android:left="3sp" android:right="3sp"/>
         </shape>
     </item>
     <item android:id="@android:id/progress"

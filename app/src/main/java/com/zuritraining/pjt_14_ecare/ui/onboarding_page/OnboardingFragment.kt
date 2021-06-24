@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
@@ -65,7 +64,7 @@ class OnboardingFragment  : Fragment() {
         // hide the bottom navigation view and toolbar to mimic the effect of a
         // full screen and also disable opening the left navigation view
         requireActivity().apply {
-            this.findViewById<Toolbar>(R.id.toolbar).visibility = View.GONE
+            this.findViewById<View>(R.id.toolbar).visibility = View.GONE
             this.findViewById<BottomNavigationView>(R.id.bottom_nav_view)
                     .visibility = View.GONE
             this.findViewById<DrawerLayout>(R.id.drawer_layout)
