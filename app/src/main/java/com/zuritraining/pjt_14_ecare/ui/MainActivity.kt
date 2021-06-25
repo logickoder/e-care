@@ -2,20 +2,16 @@ package com.zuritraining.pjt_14_ecare.ui
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-
 import com.zuritraining.pjt_14_ecare.R
 import com.zuritraining.pjt_14_ecare.databinding.ActivityMainBinding
 import com.zuritraining.pjt_14_ecare.databinding.AppBarMainBinding
 import com.zuritraining.pjt_14_ecare.databinding.ContentMainBinding
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -63,8 +59,9 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home), binding.drawerLayout)
+                R.id.navigation_home, R.id.navigation_profile ,R.id.navigation_appointments, R.id.navigation_settings), binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
+        mainContentBinding.bottomNavView.setupWithNavController(navController)
     }
 }
