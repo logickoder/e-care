@@ -18,14 +18,14 @@ class AppointmentsFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentAppointmentsBinding.inflate(inflater, container, false)
-        binding.recyclerviewAppointments.adapter = AppointmentsAdapter.UpcomingAppointmentsAdapter()
+        binding.recyclerviewAppointments.adapter = UpcomingAdapter
         binding.recyclerviewAppointments.layoutManager = LinearLayoutManager(requireContext())
         binding.tabsAppointments.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
                     when(it.position){
-                        0 -> binding.recyclerviewAppointments.adapter = AppointmentsAdapter.UpcomingAppointmentsAdapter()
-                        1 -> binding.recyclerviewAppointments.adapter = AppointmentsAdapter.HistoryAppointmentsAdapter()
+                        0 -> binding.recyclerviewAppointments.adapter = UpcomingAdapter
+                        1 -> binding.recyclerviewAppointments.adapter = HistoryAdapter
                     }
                     binding.recyclerviewAppointments.adapter?.notifyDataSetChanged()
                 }

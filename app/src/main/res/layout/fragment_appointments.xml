@@ -9,7 +9,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs_appointments"
         android:layout_width="0dp"
-        android:layout_height="30sp"
+        android:layout_height="@dimen/view_height"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"

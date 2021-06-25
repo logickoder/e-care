@@ -24,11 +24,6 @@ class HomeFragment : Fragment() {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onResume() {
-        super.onResume()
         // resets everything back to normal
         requireActivity().apply {
             this.findViewById<View>(R.id.toolbar).visibility = View.VISIBLE
@@ -37,5 +32,7 @@ class HomeFragment : Fragment() {
             this.findViewById<DrawerLayout>(R.id.drawer_layout)
                     .setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
         }
+        childFragmentManager.beginTransaction().replace(R.id.fragment_home, DoctorHome()).commit()
+        return binding.root
     }
 }

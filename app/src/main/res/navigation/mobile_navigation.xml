@@ -28,6 +28,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.zuritraining.pjt_14_ecare.ui.home.HomeFragment"
+        android:label=" "
         tools:layout="@layout/fragment_home" />
 
     <fragment
