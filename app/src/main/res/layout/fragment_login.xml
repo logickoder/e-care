@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_logo"
-        app:srcCompat="@drawable/ic_img_login" />
+        app:srcCompat="@drawable/vector_login" />
 
 
     <com.google.android.material.textfield.TextInputLayout
