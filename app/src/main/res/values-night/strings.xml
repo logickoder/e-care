@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="to_add_a_photo">add a photo</string>
+    <string name="upload_a_photo">upload a photo</string>
+    <string name="take_photo">take photo</string>
+    <string name="choose_from_camera_roll">Choose from camera roll</string>
+    <string name="create_account">create account</string>
+    <string name="a_back_action">a back button</string>
+    <string name="finish">finish</string>
+    <string name="Upload_a_photo">Upload a photo</string>
+    <string name="Create_account">Create Account</string>
+    <string name="departments">Departments</string>
+    <string name="settings_button">settings_button</string>
+    <string name="back_arrow">back_arrow</string>
+    <string name="search_logo">search_logo</string>
+    <string name="mic_logo">mic_logo</string>
+    <string name="settings">Settings</string>
+    <string name="appointments">Appointments</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="appointment_logo">Appointment</string>
+    <string name="settings_logo">settings_logo</string>
+    <string name="home_logo">home_logo</string>
+    <string name="profile_logo">profile_logo</string>
+
     <string name="doctors_string">Doctors</string>
     <string name="last_name_string">Last name</string>
     <string name="email_string">Email</string>
@@ -27,4 +51,5 @@
     <string name="profile_string">Profile</string>
     <string name="setting_string">Setting</string>
     <string name="appointments_string">Appointments</string>
+
 </resources>
