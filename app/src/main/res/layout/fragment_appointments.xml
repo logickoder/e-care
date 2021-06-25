@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/tabs_appointments"
+        android:layout_width="0dp"
+        android:layout_height="30sp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:clipToPadding="false"
+        android:padding="3dp"
+        android:textAlignment="center"
+        app:layout_constraintDimensionRatio=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorGravity="stretch"
+        app:tabMode="fixed"
+        app:tabPadding="0dp"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingTop="0dp"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:tabTextColor="@color/tab_item"
+        app:tabUnboundedRipple="false">
 
         <com.google.android.material.tabs.TabItem
+            style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_upcoming" />
@@ -25,4 +43,17 @@
             android:text="@string/title_history" />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_appointments"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tabs_appointments"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tabs_appointments"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_appointments"
+        tools:listitem="@layout/item_appointments_upcoming" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
