@@ -25,7 +25,7 @@ class Page2  : Fragment() {
         binding = PartialOnboardingPage2Binding.inflate(inflater, container, false)
 
         binding.buttonGetStarted.setOnClickListener {
-            requireView().findNavController().navigate(R.id.action_nav_onboarding_to_nav_home)
+            requireView().findNavController().navigate(R.id.action_nav_onboarding_to_loginFragment)
         }
 
         return binding.root

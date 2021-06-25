@@ -40,7 +40,7 @@ class OnboardingFragment  : Fragment() {
         binding.viewPagerOnboarding.registerOnPageChangeCallback(
                 object : ViewPager2.OnPageChangeCallback() {
                     override fun onPageSelected(position: Int) {
-                        binding.progressBar.apply {
+                        binding.progressbar.apply {
                             // increase the progress to indicate the current page the
                             // user is looking at
                             progress = (((position + 1).toDouble() / pages.size) * max).toInt()
@@ -60,7 +60,6 @@ class OnboardingFragment  : Fragment() {
 
     override fun onResume() {
         super.onResume()
-
         // hide the bottom navigation view and toolbar to mimic the effect of a
         // full screen and also disable opening the left navigation view
         requireActivity().apply {
