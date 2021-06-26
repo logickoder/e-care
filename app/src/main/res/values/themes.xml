@@ -15,6 +15,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="personal_info_theme">
+        <item name="android:textSize"> 24dp </item>
+    </style>
     <style name="Theme.ECare.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
