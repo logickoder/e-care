@@ -28,7 +28,18 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.zuritraining.pjt_14_ecare.ui.home.HomeFragment"
+        android:label=" "
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/doctorsCreateAccount"
+        android:name="com.zuritraining.pjt_14_ecare.DoctorsCreateAccount"
+        android:label="doctors_create_account_fragment"
+        tools:layout="@layout/doctors_create_account_fragment" />
+    <fragment
+        android:id="@+id/doctorsProfile"
+        android:name="com.zuritraining.pjt_14_ecare.DoctorsProfile"
+        android:label="fragment_doctors_profile"
+        tools:layout="@layout/fragment_doctors_profile" />
 
     <fragment
         android:id="@+id/navigation_appointments"
