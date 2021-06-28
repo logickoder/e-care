@@ -22,10 +22,10 @@ class Page2  : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = PartialOnboardingPage2Binding.inflate(inflater, container, false)
+        binding = PartialOnboardingPage2Binding.inflate(inflater)
 
         binding.buttonGetStarted.setOnClickListener {
-            requireView().findNavController().navigate(R.id.action_nav_onboarding_to_loginFragment)
+            requireView().findNavController().navigate(R.id.action_navigation_onboarding_to_navigation_login)
         }
 
         return binding.root

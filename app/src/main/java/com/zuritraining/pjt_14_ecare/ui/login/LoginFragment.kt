@@ -28,7 +28,10 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_nav_home)
+            findNavController().navigate(R.id.navigation_dashboard)
+        }
+        binding.textRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_login_to_navigation_create_account)
         }
     }
 }
