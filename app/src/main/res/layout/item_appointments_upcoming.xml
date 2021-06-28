@@ -1,155 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="2sp"
-        app:cardElevation="4sp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="8sp">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_doctor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/guide_image_right"
+            app:layout_constraintStart_toStartOf="@+id/guide_image_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/text_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/text_doctor_field"
+            app:layout_constraintStart_toEndOf="@+id/image_doctor"
+            app:layout_constraintTop_toTopOf="@+id/image_doctor" />
+
+        <TextView
+            android:id="@+id/text_doctor_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/image_doctor"
+            app:layout_constraintStart_toStartOf="@+id/text_doctor_name"
+            app:layout_constraintTop_toBottomOf="@id/text_doctor_name" />
+
+        <ImageView
+            android:id="@+id/icon_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/text_upcoming_appointment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
+            app:layout_constraintStart_toEndOf="@+id/icon_calendar"
+            app:layout_constraintTop_toTopOf="@+id/icon_calendar" />
+
+        <ImageView
+            android:id="@+id/icon_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/image_doctor"
+            app:layout_constraintTop_toBottomOf="@+id/image_doctor"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/text_upcoming_appointment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_clock"
+            app:layout_constraintStart_toEndOf="@+id/icon_clock"
+            app:layout_constraintTop_toTopOf="@+id/icon_clock" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_image_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_image_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_reshedule"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reshedule"
+            app:backgroundTint="@color/secondary"
+            app:layout_constraintEnd_toStartOf="@id/button_cancel"
+            app:layout_constraintStart_toStartOf="@+id/guide_image_left"
+            app:layout_constraintTop_toBottomOf="@+id/icon_calendar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_cancel"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@android:string/cancel"
+            android:textColor="@color/secondary"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_reshedule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_reshedule"
+            app:layout_constraintTop_toTopOf="@+id/button_reshedule"
+            app:layout_constraintVertical_bias="1.0"
+            app:strokeColor="@color/secondary" />
+
+        <View
+            android:id="@+id/divider2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/image_doctor"
+            app:layout_constraintTop_toBottomOf="@+id/image_doctor" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/image_doctor"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerInside"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@+id/guide_image_right"
-                app:layout_constraintStart_toStartOf="@+id/guide_image_left"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/CircleImageView"
-                app:srcCompat="@drawable/ic_logo" />
-
-            <TextView
-                android:id="@+id/text_doctor_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/text_doctor_field"
-                app:layout_constraintStart_toEndOf="@+id/image_doctor"
-                app:layout_constraintTop_toTopOf="@+id/image_doctor" />
-
-            <TextView
-                android:id="@+id/text_doctor_field"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                app:layout_constraintBottom_toBottomOf="@+id/image_doctor"
-                app:layout_constraintStart_toStartOf="@+id/text_doctor_name"
-                app:layout_constraintTop_toBottomOf="@id/text_doctor_name" />
-
-            <Space
-                android:id="@+id/space"
-                android:layout_width="0dp"
-                android:layout_height="1sp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@color/background"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_doctor" />
-
-            <ImageView
-                android:id="@+id/icon_calendar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/space"
-                app:srcCompat="@drawable/ic_calendar" />
-
-            <TextView
-                android:id="@+id/text_upcoming_appointment_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/app_name"
-                app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
-                app:layout_constraintStart_toEndOf="@+id/icon_calendar"
-                app:layout_constraintTop_toTopOf="@+id/icon_calendar" />
-
-            <ImageView
-                android:id="@+id/icon_clock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/image_doctor"
-                app:layout_constraintTop_toBottomOf="@+id/image_doctor"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_calendar" />
-
-            <TextView
-                android:id="@+id/text_upcoming_appointment_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/app_name"
-                app:layout_constraintBottom_toBottomOf="@+id/icon_clock"
-                app:layout_constraintStart_toEndOf="@+id/icon_clock"
-                app:layout_constraintTop_toTopOf="@+id/icon_clock" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guide_image_left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.0" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guide_image_right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.2" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_reshedule"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Reshedule"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:backgroundTint="@color/secondary"
-                app:layout_constraintEnd_toStartOf="@id/button_cancel"
-                app:layout_constraintStart_toStartOf="@+id/guide_image_left"
-                app:layout_constraintTop_toBottomOf="@+id/icon_calendar" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_cancel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@android:string/cancel"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/secondary"
-                app:backgroundTint="@android:color/transparent"
-                app:elevation="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/button_reshedule"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_reshedule"
-                app:layout_constraintTop_toTopOf="@+id/button_reshedule"
-                app:layout_constraintVertical_bias="1.0"
-                app:rippleColor="@android:color/transparent"
-                app:strokeColor="@color/secondary"
-                app:strokeWidth="1sp" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

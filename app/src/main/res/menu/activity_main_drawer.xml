@@ -5,39 +5,39 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_dashboard"
+            android:id="@+id/navigation_dashboard"
             android:icon="@drawable/ic_dashboard"
             android:title="@string/title_dashboard" />
         <item
-            android:id="@+id/nav_appointments"
+            android:id="@+id/navigation_appointments"
             android:icon="@drawable/ic_appointments"
             android:title="@string/title_appointments" />
         <item
-            android:id="@+id/nav_doctors"
+            android:id="@+id/navigation_doctors"
             android:icon="@drawable/ic_doctors"
             android:title="@string/title_doctors" />
         <item
-            android:id="@+id/nav_departments"
+            android:id="@+id/navigation_departments"
             android:icon="@drawable/ic_departments"
             android:title="@string/title_departments" />
         <item
-            android:id="@+id/nav_patients"
+            android:id="@+id/navigation_patients"
             android:icon="@drawable/ic_patient"
             android:title="@string/title_patients" />
         <item
-            android:id="@+id/nav_patient_transfers"
+            android:id="@+id/navigation_patient_transfers"
             android:icon="@drawable/ic_patient"
             android:title="@string/title_patient_transfers" />
         <item
-            android:id="@+id/nav_hospital_connect"
+            android:id="@+id/navigation_hospital_connect"
             android:icon="@drawable/ic_patient"
             android:title="@string/title_hospital_connect" />
         <item
-            android:id="@+id/nav_payments"
+            android:id="@+id/navigation_payments"
             android:icon="@drawable/ic_card"
             android:title="@string/title_payments" />
         <item
-            android:id="@+id/nav_help"
+            android:id="@+id/navigation_help"
             android:icon="@drawable/ic_help"
             android:title="@string/title_help" />
 
