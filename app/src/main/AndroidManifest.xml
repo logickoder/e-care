@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.ECare">
-        <activity android:name=".ui.congratulations_page.CongratulationsDialog"></activity>
+
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"

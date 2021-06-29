@@ -50,9 +50,6 @@
     <string name="title_upcoming">Upcoming</string>
     <string name="title_history">History</string>
     <string name="title_filter">Filter</string>
-
-    <string name="title_home">Home</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="doctors_string">Doctors</string>
     <string name="last_name_string">Last name</string>
     <string name="email_string">Email</string>
@@ -67,13 +64,10 @@
     <string name="next_string">Next</string>
     <string name="create_account_string">Create Account</string>
     <string name="string"><![CDATA[<]]></string>
-    <string name="string"><![CDATA[<]]></string>
     <string name="doctors_profile_pic_string">Doctors_Profile_Pic</string>
-    <string name="profile_string">Profile</string>
     <string name="notificationicon_string">notificationIcon</string>
     <string name="personal_information_string">Personal Information</string>
     <string name="my_doctors_string">My Doctors</string>
-    <string name="appointments_string">Appointments</string>
     <string name="online_consultations_string">Online Consultations</string>
     <string name="medical_records_string">Medical Records</string>
     <string name="my_medical_tests_string">My Medical Tests</string>
