@@ -47,11 +47,6 @@
             app:destination="@id/navigation_dashboard" />
     </navigation>
 
-    <fragment
-        android:id="@+id/navigation_doctor_profile"
-        android:name="com.zuritraining.pjt_14_ecare.DoctorsProfile"
-        android:label="fragment_doctors_profile"
-        tools:layout="@layout/fragment_doctors_profile" />
 
     <fragment
         android:id="@+id/navigation_appointments"
