@@ -28,6 +28,7 @@ import com.zuritraining.pjt_14_ecare.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
+    companion object {}
 
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding: FragmentLoginBinding
@@ -41,8 +42,8 @@ class LoginFragment : Fragment() {
 
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding = FragmentLoginBinding.inflate(inflater, container, false)
@@ -63,12 +64,16 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonLogin.setOnClickListener { view ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_nav_home)
+        binding.buttonLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_nav_home)
         }
 
         binding.buttonGoogle.setOnClickListener {
             signInWithGoogle()
+        }
+
+        binding.textRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_login_to_navigation_create_account)
         }
 
     }
@@ -95,11 +100,11 @@ class LoginFragment : Fragment() {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)!!
-                Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
+                Log.d("LoginFragment", "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
-                Log.w(TAG, "Google sign in failed", e)
+                Log.w("LoginFragment", "Google sign in failed", e)
             }
         }
     }
@@ -116,7 +121,7 @@ class LoginFragment : Fragment() {
 
             } else {
                 // If sign in fails, display a message to the user.
-                Log.w(TAG, "signInWithCredential:failure", task.exception)
+                Log.w("LoginFragment", "signInWithCredential:failure", task.exception)
 
             }
         }
@@ -124,12 +129,8 @@ class LoginFragment : Fragment() {
 
     private fun updateUI(user: FirebaseUser?) {
         if (!user?.displayName.isNullOrEmpty()) {
-            findNavController().navigate(R.id.action_loginFragment_to_nav_home)
+            findNavController().navigate(R.id.navigation_dashboard)
         }
-    }
 
-
-    companion object {
-        private const val TAG = "LoginFragment"
     }
 }

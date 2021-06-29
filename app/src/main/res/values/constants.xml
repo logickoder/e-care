@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recycler_arg">ADAPTER</string>
+    <string name="home_screen_arg">HOME_SCREEN</string>
+</resources>
