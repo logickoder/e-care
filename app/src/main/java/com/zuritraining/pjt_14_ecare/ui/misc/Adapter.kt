@@ -8,9 +8,9 @@ import androidx.viewbinding.ViewBinding
  * Created 24-Jun-21 at 9:57 PM
  * TODO: Add arrays and stuff for this class
  */
-abstract class Adapter<T>(): RecyclerView.Adapter<Adapter<T>.ViewHolder<T>>() {
+abstract class Adapter<T>(open val items: List<Any>? = null): RecyclerView.Adapter<Adapter<T>.ViewHolder<T>>() {
 
-    override fun getItemCount(): Int = 6
+    override fun getItemCount(): Int = items?.size ?: 6
 
     inner class ViewHolder<T>(val binding: T): RecyclerView.ViewHolder((binding as ViewBinding).root)
 }

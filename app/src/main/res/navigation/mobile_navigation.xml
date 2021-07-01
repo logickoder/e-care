@@ -50,7 +50,7 @@
 
     <fragment
         android:id="@+id/navigation_appointments"
-        android:name="com.zuritraining.pjt_14_ecare.ui.patient.appointments.AppointmentsFragment"
+        android:name="com.zuritraining.pjt_14_ecare.ui.patient.AppointmentsFragment"
         android:label="@string/title_appointments"
         tools:layout="@layout/fragment_appointments"/>
 
@@ -70,6 +70,20 @@
         android:name="com.zuritraining.pjt_14_ecare.ui.dashboard.DashboardFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_dashboard"/>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.zuritraining.pjt_14_ecare.ui.patient.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_personal_information"
+            app:destination="@id/navigation_personal_information" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_personal_information"
+        android:name="com.zuritraining.pjt_14_ecare.ui.patient.PersonalInformationFragment"
+        android:label="Personal Information"
+        tools:layout="@layout/fragment_profile_personal_information"/>
 
 
 </navigation>

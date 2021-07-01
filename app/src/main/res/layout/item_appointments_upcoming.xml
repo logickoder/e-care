@@ -125,7 +125,8 @@
             app:layout_constraintStart_toEndOf="@+id/button_reshedule"
             app:layout_constraintTop_toTopOf="@+id/button_reshedule"
             app:layout_constraintVertical_bias="1.0"
-            app:strokeColor="@color/secondary" />
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1sp" />
 
         <View
             android:id="@+id/divider2"

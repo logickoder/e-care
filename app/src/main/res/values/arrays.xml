@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_entries">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="blood_type_entries">
+
+    </string-array>
+
+    <!--Profile page-->
+    <string-array name="profile_entries">
+        <item>Personal Information</item>
+        <item>My Doctors</item>
+        <item>Appointments</item>
+        <item>Online Consultations</item>
+        <item>Medical Records</item>
+        <item>My Medical Tests</item>
+    </string-array>
+    <string-array name="profile_entries_subtitle">
+        <item></item>
+        <item>Bookmark doctors for easy access</item>
+        <item>View your booked appointments</item>
+        <item>View and book your online consultations</item>
+        <item>Save your medical records</item>
+        <item>Find your health checkups done</item>
+    </string-array>
+    <integer-array name="profile_values">
+        <item>@id/action_navigation_profile_to_navigation_personal_information</item>
+        <item>@id/navigation_doctors</item>
+        <item>@id/navigation_appointments</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+
+    <!--Dashboard Page-->
+    <string-array name="dashboard_services_entries">
+        <item>Diagnosis</item>
+        <item>Consultation</item>
+        <item>Insurance</item>
+        <item>Labs</item>
+        <item>Hospital</item>
+        <item>Ambulance</item>
+    </string-array>
+    <integer-array name="dashboard_services_entries_images">
+        <item>@drawable/ic_diagnosis</item>
+        <item>@drawable/ic_consultation</item>
+        <item>@drawable/ic_insurance</item>
+        <item>@drawable/ic_labs</item>
+        <item>@drawable/ic_hospital</item>
+        <item>@drawable/ic_ambulance</item>
+    </integer-array>
+
+    <!--Departments Page-->
+    <string-array name="department_entries">
+        <item>Surgery</item>
+        <item>Dentistry</item>
+        <item>Orthopaedia</item>
+        <item>Getriatrics</item>
+        <item>Pediatrics</item>
+        <item>E.N.T</item>
+        <item>Opthamology</item>
+    </string-array>
+    <integer-array name="department_entries_images">
+        <item>@drawable/ic_surgery</item>
+        <item>@drawable/ic_dentistry</item>
+        <item>@drawable/ic_orthopaedia</item>
+        <item>@drawable/ic_getriatrics</item>
+        <item>@drawable/ic_pediatrics</item>
+        <item>@drawable/ic_ent</item>
+        <item>@drawable/ic_opthamology</item>
+    </integer-array>
+</resources>

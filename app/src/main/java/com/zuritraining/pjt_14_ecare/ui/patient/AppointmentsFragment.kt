@@ -1,4 +1,4 @@
-package com.zuritraining.pjt_14_ecare.ui.patient.appointments
+package com.zuritraining.pjt_14_ecare.ui.patient
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,14 +18,16 @@ class AppointmentsFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentAppointmentsBinding.inflate(inflater, container, false)
-        binding.recyclerviewAppointments.adapter = UpcomingAdapter
+        binding.recyclerviewAppointments.adapter = AppointmentAdapters.UpcomingAdapter
         binding.recyclerviewAppointments.layoutManager = LinearLayoutManager(requireContext())
         binding.tabsAppointments.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
                     when(it.position){
-                        0 -> binding.recyclerviewAppointments.adapter = UpcomingAdapter
-                        1 -> binding.recyclerviewAppointments.adapter = HistoryAdapter
+                        0 -> binding.recyclerviewAppointments.adapter =
+                            AppointmentAdapters.UpcomingAdapter
+                        1 -> binding.recyclerviewAppointments.adapter =
+                            AppointmentAdapters.HistoryAdapter
                     }
                     binding.recyclerviewAppointments.adapter?.notifyDataSetChanged()
                 }

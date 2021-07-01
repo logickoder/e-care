@@ -56,6 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Here are yout important tasks, updates and alerts. You can set your in app preferences here"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

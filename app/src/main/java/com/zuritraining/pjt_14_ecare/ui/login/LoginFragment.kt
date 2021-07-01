@@ -2,7 +2,6 @@ package com.zuritraining.pjt_14_ecare.ui.login
 
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,9 +13,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -64,7 +63,9 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonLogin.setOnClickListener {}
+        binding.buttonLogin.setOnClickListener {
+            requireView().findNavController().navigate(R.id.navigation_dashboard)
+        }
 
         binding.buttonGoogle.setOnClickListener {
             signInWithGoogle()
@@ -120,7 +121,6 @@ class LoginFragment : Fragment() {
             } else {
                 // If sign in fails, display a message to the user.
                 Log.w("LoginFragment", "signInWithCredential:failure", task.exception)
-
             }
         }
     }

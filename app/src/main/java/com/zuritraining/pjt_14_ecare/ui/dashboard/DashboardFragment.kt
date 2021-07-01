@@ -20,25 +20,39 @@ class DashboardFragment: Fragment() {
     private lateinit var binding: FragmentDashboardBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
         binding.recyclerviewArticles.adapter = DashboardAdapters.HealthArticle
         binding.recyclerviewArticles.layoutManager = LinearLayoutManager(
-                requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            requireContext(), LinearLayoutManager.HORIZONTAL, false
+        )
         binding.showcasePatient.visibility = View.GONE
-        binding.recyclerviewServices.adapter = DashboardAdapters.HealthService
-        binding.recyclerviewServices.layoutManager = GridLayoutManager(
-                requireContext(), 3)
+        binding.recyclerviewServices.apply {
+            resources.apply {
+                val names = getStringArray(R.array.dashboard_services_entries)
+                val images = obtainTypedArray(R.array.dashboard_services_entries_images)
 
-        requireActivity().apply {
-            findViewById<View>(R.id.toolbar).visibility = View.VISIBLE
-            findViewById<BottomNavigationView>(R.id.bottom_nav_view).visibility = View.VISIBLE
-            findViewById<DrawerLayout>(R.id.drawer_layout)
+                val services = mutableListOf<DashboardData.Service>()
+                for ((index, name) in names.withIndex()) {
+                    services.add(DashboardData.Service(name, images.getResourceId(index, 0)))
+                }
+                images.recycle()
+                adapter = DashboardAdapters.HealthService(services)
+            }
+            binding.recyclerviewServices.layoutManager = GridLayoutManager(
+                requireContext(), 3
+            )
+
+            requireActivity().apply {
+                findViewById<View>(R.id.toolbar).visibility = View.VISIBLE
+                findViewById<BottomNavigationView>(R.id.bottom_nav_view).visibility = View.VISIBLE
+                findViewById<DrawerLayout>(R.id.drawer_layout)
                     .setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            }
+            return binding.root
         }
-        return binding.root
     }
 }

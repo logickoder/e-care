@@ -6,8 +6,8 @@
             android:shape="rectangle">
             <corners android:radius="2sp" />
             <size android:height="6sp" />
-            <solid android:color="@color/primary_3" />
-            <stroke android:color="@color/primary_3" android:width="2sp"/>
+            <solid android:color="@color/primary" />
+            <stroke android:color="@color/primary" android:width="2sp"/>
             <padding android:left="3sp" android:right="3sp"/>
         </shape>
     </item>
