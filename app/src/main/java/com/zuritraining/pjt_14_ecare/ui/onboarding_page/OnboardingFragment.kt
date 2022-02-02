@@ -29,7 +29,7 @@ class OnboardingFragment  : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentOnboardingPageBinding.inflate(inflater, container, false)
+        binding = FragmentOnboardingPageBinding.inflate(inflater)
         pages = arrayOf(Page1(), Page2())
         // creates a new view pager adapter with the pages the viewpager will show
         // and assigns the adapter to the viewpager
